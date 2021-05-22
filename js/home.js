@@ -9,14 +9,19 @@ if (mainDiv) {
       let output = "";
       repos.forEach(function (data) {
         output += `
-                <ul class="home_posts" id=${data.id} onclick="fadeOut(${data.id})">
-                    <li class="home_titles">${data.name}</li>
-                    <li class="home_titles">${data.description}</li>
-                    <li class="home_titles">${data.language}</li>
-                    <li class="home_titles">${data.stargazers_count}</li>
-                    <li class="home_titles">${data.forks_count}</li>
-                    <li class="home_titles">${data.created_at}</li>
-                </ul>`;
+        <a href="${data.id}">  
+                <div class="repo-card" id=${data.id}">
+                <div class="repo-created">${data.created_at}</div>
+                    <div class="repo-name">${data.name}</div>
+                    <div class="repo-desc">${data.description}</div>
+                    <div class="repo-info">
+                        <div class="repo-lang">Language: ${data.language}</div>
+                        <div class="repo-star"> <ion-icon name="star"></ion-icon> Stars: ${data.stargazers_count}</div>
+                        <div class="repo-fork"><ion-icon name="git-network"></ion-icon> Forks: ${data.forks_count}</div>
+                    </div>
+                    
+                </div>
+        </a>`;
       });
       count = repos.length;
       document.getElementById("home-container").innerHTML = output;
