@@ -11,7 +11,6 @@ if (mainDiv) {
         output += `
         <a href="${data.id}">  
                 <div class="repo-card" id=${data.id}">
-                <div class="repo-created">${data.created_at}</div>
                     <div class="repo-name">${data.name}</div>
                     <div class="repo-desc">${data.description}</div>
                     <div class="repo-info">
@@ -19,7 +18,7 @@ if (mainDiv) {
                         <div class="repo-star"> <ion-icon name="star"></ion-icon> Stars: ${data.stargazers_count}</div>
                         <div class="repo-fork"><ion-icon name="git-network"></ion-icon> Forks: ${data.forks_count}</div>
                     </div>
-                    
+                    <div class="repo-created">Created on: ${data.created_at}</div>
                 </div>
         </a>`;
       });
