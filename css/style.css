@@ -2,17 +2,79 @@
 
 body {
   font-family: "Barlow", sans-serif;
-  background-color: rgba(0, 0, 0, 0.863);
-  font-size: 18px;
+  background-color: #ffffff;
+  font-size: 20px;
 }
+
+*:focus {
+  outline: none;
+}
+
 ion-icon {
   font-size: 16px;
   margin-bottom: -2px;
 }
+
 a {
   text-decoration: none;
   color: #000000;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.heading {
+  color: #e8442e;
+  font-size: 150px;
+
+  /* OLD NETFLIX LOGO DESIGN */
+  /* color: #ffffff;
+  font-weight: 700;
+  text-shadow: -2px 0 #000000, 0 -2px #000000, 2px 0 #000000, 0 2px #000000,
+    -2px -2px #000000, -2px 2px #000000, 2px -2px #000000, 1px 1px #000000,
+    2px 2px #e8442e, 3px 3px #e8442e, 4px 4px #e8442e, 5px 5px #e8442e,
+    6px 6px #e8442e, 7px 7px #e8442e, 8px 8px #e8442e, 9px 9px #e8442e,
+    10px 10px #e8442e, 11px 11px #e8442e; */
+}
+
+.sub-heading {
+  color: #e8442e;
+  font-size: 50px;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#searchText {
+  border: 2px solid #000000;
+  box-shadow: 15px 5px #e8442e;
+  background: #ffffff;
+  margin: 15px 0 15px 0;
+  line-height: 45px;
+  width: 70%;
+  padding: 0 22px;
+  font-size: 18px;
+}
+
+#searchButton {
+  border: 2px solid #000000;
+  background: #ffffff;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  margin: 15px 0 15px 0;
+  width: 70px;
+  box-shadow: 5px 5px#e8442e;
+}
+
 /* Home page */
 #home-container {
   justify-content: center;
@@ -39,9 +101,9 @@ li {
   height: 250px;
   display: flex;
   flex-direction: column;
-  border: 0px rgb(0, 0, 0) solid;
-  background: #f50303;
-  box-shadow: 5px 5px#ffffff;
+  border: 2px rgb(0, 0, 0) solid;
+  background: #ffffff;
+  box-shadow: 5px 5px#e8442e;
   transition: 0.25s ease;
   padding: 20px;
 }
@@ -49,6 +111,7 @@ li {
 .repo-card:hover {
   box-shadow: 0px 0px rgba(0, 0, 0, 0);
   transform: translate(5px, 5px);
+  border: 2px #e8442e dashed;
 }
 
 .repo-name {
@@ -62,8 +125,8 @@ li {
 
 .repo-created {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
   padding: 10px;
 }
 
@@ -79,9 +142,9 @@ li {
 .repo-lang,
 .repo-star,
 .repo-fork {
-  margin: 5px;
-  padding: 5px 10px 5px 10px;
-  background-color: rgba(255, 255, 255, 0.699);
+  margin: 3px;
+  padding: 10px;
+  background-color: rgb(240, 178, 178);
 }
 
 .home_titles {
@@ -90,4 +153,9 @@ li {
   text-align: center;
   width: 90%;
   margin-top: 10px;
+}
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
 }
