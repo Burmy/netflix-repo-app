@@ -31,7 +31,7 @@ a {
 
 .heading {
   color: #e8442e;
-  font-size: 150px;
+  font-size: 10vw;
 
   /* OLD NETFLIX LOGO DESIGN */
   /* color: #ffffff;
@@ -45,7 +45,7 @@ a {
 
 .sub-heading {
   color: #e8442e;
-  font-size: 50px;
+  font-size: 4.5vw;
 }
 
 .search {
@@ -161,19 +161,39 @@ a {
   align-items: center;
 }
 
-.commit-list {
-  border: 2px rgb(0, 0, 0) solid;
-  background: #ffffff;
-  box-shadow: 5px 5px#e8442e;
-  width: 60%;
-  margin: 20px;
-  padding: 10px;
+.commit-line {
+  border-left: 2px solid black;
+  margin: 50px 80px 50px 80px;
+  padding: 0 30px 0 30px;
 }
 
+.repo-selected {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.each-commit {
+  margin-bottom: 40px;
+  border: 2px solid black;
+  box-shadow: 4px 4px#e8442e;
+  padding: 20px;
+}
+
+.commit-icon {
+  margin-bottom: -7px;
+  font-size: 27px;
+  color: #e8442e;
+}
+
+.committer {
+  font-size: 24px;
+}
 .commit-info {
-  margin: 20px 0 0 30px;
+  margin: 20px 0 0 45px;
+  font-size: 20px;
 }
-
-.commit-hash {
-  padding-top: 40px;
+.commit-message {
+  font-size: 18px;
 }

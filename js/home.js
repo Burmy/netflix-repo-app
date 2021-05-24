@@ -44,15 +44,15 @@ function getCommit() {
   fetch(fetchURL)
     .then((response) => response.json())
     .then((commits) => {
-      let output = "";
+      let output = `<div class="commit-line"> <div class="repo-selected">${repoName}</div>`;
       commits.forEach(function (data) {
         createdOn = new Date(data.commit.author.date).toDateString();
         output += `
-          <div class="commit-list">
-              <div class="">${data.commit.message}</div>
+          <div class="each-commit">
+              <div class="committer"><ion-icon class = "commit-icon" name="git-commit-outline"></ion-icon> ${data.commit.author.name} on ${createdOn}</div>
               <div class="commit-info">
-                <div class="">${data.commit.author.name} on ${createdOn}</div>
-                <div class="commit-hash">Commit Hash: ${data.sha}</div>
+                <div class="commit-message">Commit: ${data.commit.message}</div>
+                <div class="commit-hash">Hash: ${data.sha}</div>
               </div>
           </div>`;
       });
