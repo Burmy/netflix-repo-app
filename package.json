@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Burmy/netflix-repo-app/issues"
   },
-  "homepage": "https://Burmy.github.io/netflix-repo-app",
+  "homepage": "https://burmy.github.io/netflix-repo-app/",
   "dependencies": {
     "gh-pages": "^3.2.0"
   }
