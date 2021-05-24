@@ -1,0 +1,23 @@
+{
+  "name": "netflix-repo-app",
+  "version": "1.0.0",
+  "description": "This is a simple Netflix repositories searching app. The user can search any repositories using the search bar and each repository contains the information about the recent commits made to the repository.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d Application"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Burmy/netflix-repo-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Burmy/netflix-repo-app/issues"
+  },
+  "homepage": "https://Burmy.github.io/netflix-repo-app",
+  "dependencies": {
+    "gh-pages": "^3.2.0"
+  }
+}
