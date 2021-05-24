@@ -31,7 +31,7 @@ a {
 
 .heading {
   color: #e8442e;
-  font-size: 10vw;
+  font-size: 150px;
 
   /* OLD NETFLIX LOGO DESIGN */
   /* color: #ffffff;
@@ -45,7 +45,8 @@ a {
 
 .sub-heading {
   color: #e8442e;
-  font-size: 4.5vw;
+  font-size: 50px;
+  margin-bottom: 30px;
 }
 
 .search {
@@ -142,6 +143,7 @@ a {
   display: flex;
   flex-direction: row;
 }
+
 .home_titles {
   border-radius: 10px;
   list-style-type: none;
@@ -164,7 +166,7 @@ a {
 .commit-line {
   border-left: 2px solid black;
   margin: 50px 80px 50px 80px;
-  padding: 0 30px 0 30px;
+  padding-left: 30px;
 }
 
 .repo-selected {
@@ -190,10 +192,55 @@ a {
 .committer {
   font-size: 24px;
 }
+
 .commit-info {
   margin: 20px 0 0 45px;
   font-size: 20px;
 }
-.commit-message {
-  font-size: 18px;
+
+@media only screen and (max-width: 550px) {
+  .heading {
+    font-size: 100px;
+  }
+
+  .sub-heading {
+    font-size: 35px;
+  }
+  .repo-card {
+    width: 400px;
+    height: 300px;
+  }
+  .repo-info {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .heading {
+    font-size: 60px;
+  }
+  .sub-heading {
+    font-size: 30px;
+  }
+  .repo-card {
+    width: 300px;
+    height: 500px;
+  }
+  .repo-sub-info {
+    flex-direction: column;
+  }
+  .repo-lang,
+  .repo-star,
+  .repo-fork {
+    margin-top: 7px;
+  }
+  .repo-info {
+    margin-left: 30px;
+    right: 0;
+    font-size: 18px;
+    justify-content: flex-start;
+  }
+  .repo-created {
+    margin: 10px 0 10px 0;
+  }
 }

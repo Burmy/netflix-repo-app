@@ -1,6 +1,20 @@
-let mainDiv = document.getElementById("repo-container");
+// let repos = [];
+// console.log(repos);
 
-if (mainDiv) {
+// const searchBar = document.getElementById("searchText");
+
+// searchBar.addEventListener("keyup", (e) => {
+//   const searchString = e.target.value;
+//   const filteredRepos = repos.filter((repo) => {
+//     return repo.name.contains(searchString);
+//   });
+//   console.log(filteredRepos);
+// });
+
+//Showing all the repos
+let reposPage = document.getElementById("repo-container");
+
+if (reposPage) {
   let fetchURL = "https://api.github.com/orgs/Netflix/repos";
   fetch(fetchURL)
     .then((response) => response.json())
@@ -32,12 +46,14 @@ if (mainDiv) {
     });
 }
 
+//stores the repo name which was selected
 function repoSelected(name) {
   sessionStorage.setItem("repoName", name);
   window.location = "commits.html";
   return false;
 }
 
+//showing the commits of the repos
 function getCommit() {
   let repoName = sessionStorage.getItem("repoName");
   let fetchURL = "https://api.github.com/repos/Netflix/" + repoName + "/commits";
