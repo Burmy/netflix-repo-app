@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <title>Netflix Repo Finder</title>
+    <script defer type="text/javascript" src="../js/home.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="heading">NETFLIX</div>
+      <div class="sub-heading">Repo Finder</div>
+      <div class="search">
+        <input id="searchText" onkeyup="Search()" type="text" placeholder="Search a Repository!" />
+        <button type="submit" id="searchButton">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </div>
+    </header>
+
+    <div id="repo-container"></div>
+
+    <footer class="footer">
+      <p>
+        Made by <a target="_blank" rel="noopener noreferrer" href="https://burmy.me/" style="color: #e8442e"> Anmol Burmy </a> :)
+      </p>
+    </footer>
+  </body>
+</html>

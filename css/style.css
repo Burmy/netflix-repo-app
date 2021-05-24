@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+
+body {
+  font-family: "Barlow", sans-serif;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+
+*:focus {
+  outline: none;
+}
+
+ion-icon {
+  font-size: 16px;
+  margin-bottom: -2px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.heading {
+  color: #e8442e;
+  font-size: 150px;
+
+  /* OLD NETFLIX LOGO DESIGN */
+  /* color: #ffffff;
+  font-weight: 700;
+  text-shadow: -2px 0 #000000, 0 -2px #000000, 2px 0 #000000, 0 2px #000000,
+    -2px -2px #000000, -2px 2px #000000, 2px -2px #000000, 1px 1px #000000,
+    2px 2px #e8442e, 3px 3px #e8442e, 4px 4px #e8442e, 5px 5px #e8442e,
+    6px 6px #e8442e, 7px 7px #e8442e, 8px 8px #e8442e, 9px 9px #e8442e,
+    10px 10px #e8442e, 11px 11px #e8442e; */
+}
+
+.sub-heading {
+  color: #e8442e;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+#searchText {
+  border: 2px solid #000000;
+  box-shadow: 15px 5px #e8442e;
+  background: #ffffff;
+  margin: 15px 0 15px 0;
+  line-height: 45px;
+  width: 70%;
+  padding: 0 22px;
+  font-size: 18px;
+}
+
+#searchButton {
+  border: 2px solid #000000;
+  background: #ffffff;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  margin: 15px 0 15px 0;
+  width: 70px;
+  box-shadow: 5px 5px#e8442e;
+}
+
+/* Home page */
+#repo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.repo-card {
+  position: relative;
+  width: 450px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 2px rgb(0, 0, 0) solid;
+  background: #ffffff;
+  box-shadow: 5px 5px#e8442e;
+  transition: 0.25s ease;
+  padding: 20px;
+  margin: 30px;
+}
+
+.repo-card:hover {
+  box-shadow: 0px 0px rgba(0, 0, 0, 0);
+  transform: translate(5px, 5px);
+  border: 2px #e8442e dashed;
+}
+
+.repo-name {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.repo-desc {
+  padding: 10px 0 10px 10px;
+}
+
+.repo-created {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.repo-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  font-size: 18px;
+}
+
+.repo-lang,
+.repo-star,
+.repo-fork {
+  margin-right: 7px;
+  padding: 10px;
+  background-color: rgb(240, 178, 178);
+}
+
+.repo-sub-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.home_titles {
+  border-radius: 10px;
+  list-style-type: none;
+  text-align: center;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#commit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.commit-line {
+  border-left: 2px solid black;
+  margin: 50px 80px 50px 80px;
+  padding-left: 30px;
+}
+
+.repo-selected {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.each-commit {
+  margin-bottom: 40px;
+  border: 2px solid black;
+  box-shadow: 4px 4px#e8442e;
+  padding: 20px;
+}
+
+.commit-icon {
+  margin-bottom: -7px;
+  font-size: 27px;
+  color: #e8442e;
+}
+
+.committer {
+  font-size: 24px;
+}
+
+.commit-info {
+  margin: 20px 0 0 45px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 550px) {
+  .heading {
+    font-size: 100px;
+  }
+
+  .sub-heading {
+    font-size: 35px;
+  }
+  .repo-card {
+    width: 400px;
+    height: 300px;
+  }
+  .repo-info {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .heading {
+    font-size: 60px;
+  }
+  .sub-heading {
+    font-size: 30px;
+  }
+  .repo-card {
+    width: 300px;
+    height: 500px;
+  }
+  .repo-sub-info {
+    flex-direction: column;
+  }
+  .repo-lang,
+  .repo-star,
+  .repo-fork {
+    margin-top: 7px;
+  }
+  .repo-info {
+    margin-left: 30px;
+    right: 0;
+    font-size: 18px;
+    justify-content: flex-start;
+  }
+  .repo-created {
+    margin: 10px 0 10px 0;
+  }
+}
