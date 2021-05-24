@@ -1,15 +1,30 @@
-// let repos = [];
-// console.log(repos);
+function Search() {
+  // User Input
+  let input = document.getElementById("searchText");
 
-// const searchBar = document.getElementById("searchText");
+  // Filter, makes search not case sensitive
+  let filter = input.value.toUpperCase();
 
-// searchBar.addEventListener("keyup", (e) => {
-//   const searchString = e.target.value;
-//   const filteredRepos = repos.filter((repo) => {
-//     return repo.name.contains(searchString);
-//   });
-//   console.log(filteredRepos);
-// });
+  let container = document.getElementById("repo-container");
+
+  // Individual item on list
+  let card = document.getElementsByClassName("repo-card");
+
+  // Treats lists items like an array, where each item can be accessed through it's index
+  for (i = 0; i < card.length; i++) {
+    let item = card[i];
+
+    // Iterate over each list item to see if the value of the input, ignoring case, matches the inner text or inner html of the item.
+    let txtValue = item.textContent || item.innerText;
+
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      // Displays list items that are a match, and nothing if no match
+      card[i].style.display = "";
+    } else {
+      card[i].style.display = "none";
+    }
+  }
+}
 
 //Showing all the repos
 let reposPage = document.getElementById("repo-container");
@@ -43,6 +58,9 @@ if (reposPage) {
         </a>`;
       });
       document.getElementById("repo-container").innerHTML = output;
+    })
+    .catch((err) => {
+      console.log(err);
     });
 }
 
@@ -73,5 +91,8 @@ function getCommit() {
           </div>`;
       });
       document.getElementById("commit-container").innerHTML = output;
+    })
+    .catch((err) => {
+      console.log(err);
     });
 }

@@ -53,7 +53,7 @@ a {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 #searchText {
@@ -80,11 +80,9 @@ a {
 
 /* Home page */
 #repo-container {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  display: grid;
-  gap: 30px 30px;
-  justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 500px));
 }
 
 .repo-card {
@@ -98,6 +96,7 @@ a {
   box-shadow: 5px 5px#e8442e;
   transition: 0.25s ease;
   padding: 20px;
+  margin: 30px;
 }
 
 .repo-card:hover {
